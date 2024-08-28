@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dropdown-content {
+    display: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dark .dark\:bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.dark .dark\:bg-gray-700 {
+    background-color: #4a5568;
+}
+.dark .dark\:bg-gray-900 {
+    background-color: #4a5568;
+}
+
+.dark .dark\:text-gray-200 {
+    color: #edf2f7;
+}
+
+.dark .dark\:text-gray-300 {
+    color: #e2e8f0;
+}
+
+.dark .dark\:text-gray-400 {
+    color: #cbd5e0;
+}
+.dark .dark\:text-white {
+    color: #ffffff;
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+#typing-effect::after {
+    content: '';
+    border-right: 0.1em solid black;
+    animation: blink-caret 0.7s step-end infinite;
+}
+
+.dark #typing-effect::after {
+    border-right: 0.1em solid white;
+}
+
+
+.slider-container {
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .testimonial {
+    min-width: 100%;
+  }
+
+
+  .dropdown-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .spinner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#content {
+    display: none; 
+}
